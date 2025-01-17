@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Futbol 25 Club</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        // Highlight active navigation link
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+            const currentPath = window.location.pathname;
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html.html">Home</a>
+        <a href="fixture.html">Fixture</a>
+        <a href="squad.html">Squad</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Welcome to Real Futbol 25 Club</h1>
+        <p>This is the home page. Navigate through the menu to explore our club's fixtures, squad, and more.</p>
+    </div>
+</body>
+</html>

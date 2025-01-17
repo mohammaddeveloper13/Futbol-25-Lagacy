@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad - Real Futbol 25 Club</title>
+    <link rel="stylesheet" href="squad.css">
+    <script>
+        // Highlight active navigation link and header
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a');
+            const header = document.querySelector('header');
+            const currentPath = window.location.pathname;
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                    if (header) {
+                        header.style.backgroundColor = window.getComputedStyle(link).backgroundColor;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="fixture.html">Fixture</a>
+        <a href="squad.html">Squad</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Meet Our Squad</h1>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="player-list">
+            <div class="player">
+                <img src="player1.jpg" alt="Player 1">
+                <h2>John Doe</h2>
+                <p>Position: Forward</p>
+            </div>
+            <div class="player">
+                <img src="player2.jpg" alt="Player 2">
+                <h2>Jane Smith</h2>
+                <p>Position: Midfielder</p>
+            </div>
+            <div class="player">
+                <img src="player3.jpg" alt="Player 3">
+                <h2>Mike Johnson</h2>
+                <p>Position: Defender</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
